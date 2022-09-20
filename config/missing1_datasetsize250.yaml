@@ -1,0 +1,30 @@
+project: TAVI
+misc: synth_missing1_datasetsize250
+
+datamodule:
+  dataset_name: SyntheticDataset
+  missing_mode: mcar  # emulate_tavi
+  infinite_flag: False
+  batch_size: 32  # in total
+  num_workers: 4  # per GPU
+  exclude_procedure_data: True
+  nr_image_features: 16
+  dataset_size: 250
+  missing_factor: 1.0
+
+model:
+  iterations: 100000
+  warmup_steps: 0
+  lr: 0.001
+  freeze_cnn_bn: True
+  fine_tune_cnn: False
+  use_lr_scheduler: True
+  use_aux_as_input: False
+  use_aux_as_output: True
+  use_tab: True
+
+trainer:
+  benchmark: True
+  progress_bar_refresh_rate: 20
+  check_val_every_n_epoch: 4
+  log_every_n_steps: 100

@@ -1,0 +1,57 @@
+seed_everything: 0
+data:
+  dataset_name: SyntheticDataset
+  batch_size: 32
+  num_workers: 4
+  phase: tuning
+  dataset_kwargs:
+    missing_mode: mcar  # emulate_tavi
+    infinite_flag: False
+    nr_image_features: 16
+    dataset_size: 1000
+    missing_factor: 1.0
+model:
+  nr_image_features: 16
+  nr_cont_table_features: 10
+  nr_cat_table_features: 15
+  nr_aux_features: 15
+  lr: 0.001
+  weight_decay: 0.01
+  use_mtl: True
+  freeze_bn: True
+  neural_network:
+    class_path: monai.networks.nets.swin_unetr.SwinTransformer
+    init_args:
+      in_chans: 1
+      embed_dim: 48
+      window_size: 
+        - 7
+        - 7
+        - 7
+      patch_size:
+        - 2
+        - 2
+        - 2
+      depths:
+        - 2
+        - 2
+        - 2
+        - 2
+      num_heads:
+        - 3
+        - 6
+        - 12
+        - 24
+trainer:
+  max_steps: 40000
+  val_check_interval: 500
+  check_val_every_n_epoch: null
+  logger:
+    class_path: pytorch_lightning.loggers.CSVLogger
+    init_args:
+      save_dir: logs/swin_unetr_version
+  callbacks:
+    - class_path: pytorch_lightning.callbacks.LearningRateMonitor
+    - class_path: pytorch_lightning.callbacks.ModelCheckpoint
+      init_args:
+        every_n_train_steps: 500

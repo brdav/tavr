@@ -1,0 +1,17 @@
+{
+    "Agatston_score_aortic_valve": 2,
+    "Area_derived_diameter_of_annulus_incl_calcification": 25.0,
+    "Area_of_annulus_incl_calcification": 480.0,
+    "Calcification_of_ascending_aorta": 2,
+    "Calcification_of_sinotubular_junction": 3,
+    "Diameter_of_ascending_aorta": 34.0,
+    "LVOT_area": 500.0,
+    "LVOT_maximal_diameter": NaN,
+    "Maximal_annulus_diameter": NaN,
+    "Maximal_diameter_of_sinotubular_junction": 30.0,
+    "Perimeter_of_annulus_incl_calcification": 81.0,
+    "Sinus_portion_maximal_diameter": 34.0,
+    "Volume_of_sinus_valsalva": 18.0,
+    "Volume_score_LVOT": 50.0,
+    "Volume_score_aortic_valve": 960.0
+}

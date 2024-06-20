@@ -14,12 +14,12 @@ def predict(opt):
     print("Load the model...")
     if opt.model == "resnet":
         model = ProbabilisticModel.load_from_checkpoint(
-            "tavr_3d_resnet50_checkpoint.ckpt",
+            "https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/679121/tavr_3d_resnet50_checkpoint.ckpt",
             map_location="cpu",
         )
     elif opt.model == "swin":
         model = ProbabilisticModel.load_from_checkpoint(
-            "tavr_swin_unetr_checkpoint.ckpt",
+            "https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/679121/tavr_swin_unetr_checkpoint.ckpt",
             map_location="cpu",
         )
     else:

@@ -11,8 +11,8 @@ import torch
 from .utils import clip_and_rescale_sitk_image, crop_cube, resample_sitk_image
 
 model_urls = {
-    "RLLandmarkLocalizer": "rl_localizer_model.onnx",
-    "RegressionLandmarkLocalizer": "regression_localizer_model.onnx",
+    "RLLandmarkLocalizer": "https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/679121/rl_localizer_model.onnx",
+    "RegressionLandmarkLocalizer": "https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/679121/regression_localizer_model.onnx",
 }
 
 

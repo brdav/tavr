@@ -4,11 +4,11 @@
  
 # Predicting Mortality after Transcatheter Aortic Valve Replacement using Preprocedural CT
 
-NOTE: models linked in `tools/predict.py` and `src/landmark_localizer.py` are not uploaded yet
+![Static Badge](https://img.shields.io/badge/Article-Scientific%20Reports-D4E6F1?link=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41598-024-63022-x)
 
 </div>
 
-This repository provides [PyTorch Lightning](https://github.com/Lightning-AI/lightning) code for the proposed TAVR outcome prediction model.
+The repository provides `PyTorch Lightning` code for the TAVR outcome prediction model proposed in [this Scientific Reports article](https://www.nature.com/articles/s41598-024-63022-x).
 For privacy reasons we are not able to release the TAVR dataset, so training is only possible on synthetic data. 
 However, we provide pretrained models and testing code for the entire localizaton/ROI extraction/classification pipeline, based on both 3D ResNet-50 and Swin UNETR. 
  
@@ -28,7 +28,7 @@ The code is run with Python 3.8.16. Create a virtual environment (e.g. with `con
 pip install -r requirements.txt
 ```
 
-If this fails to install onnxruntime-gpu (e.g. on Mac OSX), install onnxruntime separately using `conda`:
+If this fails to install `onnxruntime-gpu` (e.g. on Mac OSX), install `onnxruntime` separately using `conda`:
 ```
 conda install onnxruntime==1.14.1 -c conda-forge
 ```
@@ -125,9 +125,9 @@ If you find this code useful in your research, please consider citing the paper:
   title={Predicting Mortality after Transcatheter Aortic Valve Replacement using Preprocedural CT},
   author={Bruggemann, David and Kuzo, Nazar and Anwer, Shehab and Kebernik, Julia and Eberhard, Matthias and Alkadhi, Hatem and Tanner, Felix C. and Konukoglu, Ender},
   journal={Scientific Reports},
-  volume={},
-  number={},
-  pages={},
+  volume={14},
+  number={1},
+  pages={12526},
   year={2024},
   publisher={Nature Publishing Group UK London}
 }

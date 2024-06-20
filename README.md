@@ -4,7 +4,7 @@
  
 # Predicting Mortality after Transcatheter Aortic Valve Replacement using Preprocedural CT
 
-![Static Badge](https://img.shields.io/badge/Article-Scientific%20Reports-D4E6F1?link=https%3A%2F%2Fwww.nature.com%2Farticles%2Fs41598-024-63022-x)
+[![Article](https://img.shields.io/badge/Article-Scientific%20Reports-D4E6F1.svg)](https://www.nature.com/articles/s41598-024-63022-x)
 
 </div>
 
